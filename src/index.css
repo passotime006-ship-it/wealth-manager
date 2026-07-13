@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, #eef2ff 0%, #faf5ff 45%, #fef2f2 100%);
+  background-attachment: fixed;
+  color: #1e293b;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* subtle floating orbs for depth */
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.35;
+  z-index: -1;
+  pointer-events: none;
+}
+body::before {
+  width: 480px;
+  height: 480px;
+  background: #818cf8;
+  top: -120px;
+  left: -100px;
+}
+body::after {
+  width: 420px;
+  height: 420px;
+  background: #f472b6;
+  bottom: -120px;
+  right: -80px;
+}
+
+/* smooth, premium feel on interactive elements */
+a,
+button,
+.MuiPaper-root,
+.MuiCard-root {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
