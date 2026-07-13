@@ -9,7 +9,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <ThemeProviderWrapper>
       <AuthProvider>
-        <BrowserRouter>
+        <BrowserRouter basename="/wealth-manager">
           <App />
         </BrowserRouter>
       </AuthProvider>
